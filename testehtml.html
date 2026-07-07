@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+<button onclick="abrir()">Abrir câmera</button>
+
+<script>
+async function abrir(){
+
+try{
+
+const stream = await navigator.mediaDevices.getUserMedia({
+video:true
+});
+
+alert("Camera OK");
+
+}catch(e){
+
+alert(e.name + " - " + e.message);
+
+}
+
+}
+</script>
+
+</body>
+</html>
